@@ -18,9 +18,13 @@ public class MenuUIHandler : MonoBehaviour
     
     private void Start()
     {
-        SceneManager.LoadScene(1);
         ColorPicker.Init();
         //this will call the NewColorSelected function when the color picker have a color button clicked.
         ColorPicker.onColorChanged += NewColorSelected;
+    }
+
+    public void StartNew()
+    {
+        SceneManager.LoadScene(1);
     }
 }
